@@ -1,16 +1,21 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+class Student:
+    group = "C2012"
+    edu = "IT STEP"
+    study = "online"
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+st1 =Student()
+print(st1.group)
+print(st1.edu)
+print(st1.study)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+st2 =Student()
+print(st1.group)
+print(st1.edu)
+print(st1.study)
+
+st2.group
+
+name = "Oleg"
+int(), str(), float(), list(), dict(), set(), bool(), None, frozenset()
+
