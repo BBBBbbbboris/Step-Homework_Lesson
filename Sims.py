@@ -12,14 +12,32 @@ class Human:
         self.satiety = 50
         self.thirsty = 20
 
-    def get_home(self):
-        self.home = House()
+    def chill(self):
+        self.gladness += 5
+        self.satiety -= 2
+        self.thirst -= 1
 
-    def get_car(self):
-        self.car = Auto(brands_of_car)
+    def clean_home(self):
+        if self.home is not None:
+            if self.home.mess > 0:
+                self.home.mess -= 10
+                self.gladness += 5
+                self.satiety -= 3
+            else:
+                print("The house is already clean")
+        else:
+            print("You need to get a home first")
 
-    def get_job(self):
-        self.job = Job(job_list)
+    def to_repair(self):
+        if self.car is not None:
+            if self.car.strength < 100:
+                self.car.strength += 20
+                self.money -= 50
+                print("Car repaired")
+            else:
+                print("The car is already in good condition")
+        else:
+            print("You need to get a car first")
 
     def eat(self):
         if self.home.food <= 0:
